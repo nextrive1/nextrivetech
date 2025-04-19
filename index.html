@@ -1,0 +1,300 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <title>Nextrive Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6fa;
+      color: #1b1f3b;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1b1f3b;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #00ff87;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    nav {
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #1b1f3b;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00ff87;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8em;
+      cursor: pointer;
+      color: #1b1f3b;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      padding: 0 20px 15px;
+      background: white;
+    }
+
+    .mobile-nav a {
+      padding: 10px 0;
+      border-top: 1px solid #eee;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+      text-align: justify;
+    }
+
+    h2 {
+      font-size: 2.2em;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .services li,
+    .team-member,
+    .project-item {
+      background: white;
+      border-left: 5px solid #00ff87;
+      margin: 15px 0;
+      padding: 20px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .services li:hover,
+    .team-member:hover,
+    .project-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .contact-form button {
+      background: #00ff87;
+      border: none;
+      padding: 14px 28px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #00e67f;
+    }
+
+    footer {
+      background: #1b1f3b;
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .mobile-nav.show {
+        display: flex;
+      }
+
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      h2 {
+        font-size: 1.8em;
+      }
+
+      section {
+        text-align: left;
+      }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-nav.show {
+    display: flex;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  section p {
+    text-align: justify;
+  }
+
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nextrive Technologies</h1>
+    <p>Driven by Innovation. Built for Tomorrow.</p>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#services" onclick="toggleMenu()">Services</a>
+      <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Nextrive Technologies is a future-focused tech company based in Nigeria, committed to delivering impactful technology solutions. Founded by industry professionals with a strong background in software engineering and digital strategy, we offer scalable solutions tailored to businesses, institutions, and individuals.</p>
+    <p>We are passionate about bridging the digital divide and helping organizations thrive in the digital era through smart applications, cybersecurity services, and impactful training programs. Our core team consists of certified experts driven by a mission to transform Africa’s digital ecosystem through innovation and quality service delivery.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Custom Software Development:</strong> Web, mobile, and desktop applications tailored for performance and security.</li>
+      <li><strong>Cybersecurity Solutions:</strong> Full-stack security auditing, training, and threat mitigation services.</li>
+      <li><strong>Biometric Solutions:</strong> Advanced attendance, access control, and verification systems using fingerprint/face ID.</li>
+      <li><strong>CBT & School Portals:</strong> Complete online systems for exams, results, student management, and staff tracking.</li>
+      <li><strong>Digital Skills Training:</strong> Practical IT training programs in web development, data analysis, and more.</li>
+      <li><strong>Business Website Design:</strong> Elegant, mobile-friendly, and SEO-optimized websites for companies and organizations.</li>
+      <li><strong>POS & Inventory Systems:</strong> Robust systems for small businesses and large-scale retail operations.</li>
+      <li><strong>Cloud Deployment & IT Consulting:</strong> Helping businesses scale with cloud migration, IT support, and infrastructure planning.</li>
+    </ul>
+  </section>
+
+  <section id="portfolio">
+    <h2>Our Projects</h2>
+    <div class="project-item">
+      <h4>Fresh Air Booking System</h4>
+      <p>Smart web-based booking solution with payment integration and seat management.</p>
+    </div>
+    <div class="project-item">
+      <h4>Biometric Staff Attendance System</h4>
+      <p>Fingerprint-based attendance monitoring system used in federal institutions.</p>
+    </div>
+    <div class="project-item">
+      <h4>CBT Test Platform</h4>
+      <p>Robust exam platform for school admission and internal assessments with student categorization.</p>
+    </div>
+    <div class="project-item">
+      <h4>ID Card Generator & Verifier</h4>
+      <p>System for issuing secure ID cards with QR code validation and real-time verification.</p>
+    </div>
+    <div class="project-item">
+      <h4>Online Clearance System</h4>
+      <p>Digital platform for managing student graduation clearance process efficiently.</p>
+    </div>
+    <div class="project-item">
+      <h4>Automated Teaching Timetable Generator</h4>
+      <p>Dynamic timetable scheduling tool with conflict detection and customization.</p>
+    </div>
+    <div class="project-item">
+      <h4>Point of Sale (POS) System</h4>
+      <p>Sales and stock tracking system designed for retail and business environments.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Location:</strong> Ahmadu Bello Way, T-Junction, Mubi North, Adamawa State</p>
+    <p><strong>Email:</strong> <a href="mailto:nextrivetechnologies@gmail.com">nextrivetechnologies@gmail.com</a></p>
+    <p><strong>Phone:</strong> 08169997543, 08168472591</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348169997543" target="_blank">Chat with us</a></p>
+
+    <form class="contact-form" action="https://formsubmit.co/nextrivetechnologies@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Nextrive Technologies. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("mobileNav");
+      nav.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
